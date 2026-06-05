@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jednostki w CSS</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+header{
+    background:linear-gradient(to right,#ff512f,#dd2476);
+}
+
+.karta{
+    background-color:#202b38;
+}
+
+.karta h2{
+    color:#ff512f;
+}
+
+.tabela{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+
+.tabela th,
+.tabela td{
+    border:1px solid #95d5b2;
+    padding:10px;
+    text-align:left;
+}
+
+.tabela th{
+    background-color:rgba(0,0,0,0.2);
+}
+
+@media (max-width:768px){
+
+    .tabela{
+        display:block;
+        overflow-x:auto;
+    }
+
+    .kod{
+        font-size:14px;
+        overflow-x:auto;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <h1>Jednostki w CSS</h1>
+</header>
+
+<div class="menu">
+    <a href="html.html">HTML</a>
+    <a href="css.html">CSS</a>
+</div>
+
+<div class="glowny">
+
+    <div class="karta">
+
+        <h2>Co to są jednostki w CSS?</h2>
+
+        <p>
+            Jednostki w CSS służą do określania rozmiarów elementów,
+            takich jak szerokość, wysokość, marginesy czy rozmiary czcionek.
+        </p>
+
+        <p>
+            Zapisujemy je bez spacji pomiędzy liczbą i jednostką.
+        </p>
+
+        <div class="kod">
+            width: 300px;<br>
+            font-size: 1.5rem;<br>
+            margin: 10px;
+        </div>
+
+    </div>
+
+    <div class="karta">
+
+        <h2>Podział jednostek</h2>
+
+        <p>
+            Jednostki w CSS dzielimy na:
+        </p>
+
+        <ul class="lista">
+            <li>Jednostki bezwzględne</li>
+            <li>Jednostki względne</li>
+        </ul>
+
+    </div>
+
+    <div class="karta">
+
+        <h2>Jednostki bezwzględne</h2>
+
+        <p>
+            Jednostki bezwzględne mają stałą wielkość i nie zmieniają
+            się w zależności od rozmiaru ekranu.
+        </p>
+
+        <p>
+            Nie są najlepszym rozwiązaniem przy tworzeniu stron
+            responsywnych.
+        </p>
+
+        <table class="tabela">
+
+            <tr>
+                <th>Jednostka</th>
+                <th>Opis</th>
+            </tr>
+
+            <tr>
+                <td>px</td>
+                <td>Najczęściej używana jednostka, około 1/96 cala.</td>
+            </tr>
+
+            <tr>
+                <td>cm</td>
+                <td>Centymetry.</td>
+            </tr>
+
+            <tr>
+                <td>mm</td>
+                <td>Milimetry.</td>
+            </tr>
+
+            <tr>
+                <td>in</td>
+                <td>Cal (1in = 2,54cm = 96px).</td>
+            </tr>
+
+            <tr>
+                <td>pt</td>
+                <td>Punkty (1pt = 1/72 cala).</td>
+            </tr>
+
+            <tr>
+                <td>pc</td>
+                <td>Pica (1pc = 12pt).</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+    <div class="karta">
+
+        <h2>Jednostki względne</h2>
+
+        <p>
+            Jednostki względne dopasowują swój rozmiar
+            do innych elementów lub rozmiaru okna przeglądarki.
+        </p>
+
+        <p>
+            Dzięki nim łatwiej tworzyć strony responsywne.
+        </p>
+
+    </div>
+
+    <div class="karta">
+
+        <h2>em</h2>
+
+        <p>
+            Jednostka zależna od rozmiaru czcionki elementu nadrzędnego.
+        </p>
+
+        <div class="kod">
+            font-size: 2em;
+        </div>
+
+    </div>
+
+    <div class="karta">
+
+        <h2>ex</h2>
+
+        <p>
+            Rzadko używana jednostka zależna od wysokości znaków
+            aktualnej czcionki.
+        </p>
+
+    </div>
+
+    <div class="karta">
+
+        <h2>ch</h2>
+
+        <p>
+            Odpowiada szerokości znaku „0” w aktualnej czcionce.
+        </p>
+
+        <div class="kod">
+            width: 40ch;
+        </div>
+
+    </div>
+
+    <div class="karta">
+
+        <h2>rem</h2>
+
+        <p>
+            Bazuje na rozmiarze czcionki elementu html.
+        </p>
+
+        <p>
+            Jest bardzo często wykorzystywana w nowoczesnych stronach.
+        </p>
+
+        <div class="kod">
+            font-size: 1.5rem;
+        </div>
+
+    </div>
+
+    <div class="karta">
+
+        <h2>vw</h2>
+
+        <p>
+            1vw oznacza 1% szerokości okna przeglądarki.
+        </p>
+
+        <div class="kod">
+            width: 50vw;
+        </div>
+
+    </div>
+
+    <div class="karta">
+
+        <h2>vh</h2>
+
+        <p>
+            1vh oznacza 1% wysokości okna przeglądarki.
+        </p>
+
+        <div class="kod">
+            height: 100vh;
+        </div>
+
+    </div>
+
+    <div class="karta">
+
+        <h2>vmin</h2>
+
+        <p>
+            1% mniejszego wymiaru okna przeglądarki
+            (szerokości lub wysokości).
+        </p>
+
+    </div>
+
+    <div class="karta">
+
+        <h2>vmax</h2>
+
+        <p>
+            1% większego wymiaru okna przeglądarki
+            (szerokości lub wysokości).
+        </p>
+
+    </div>
+
+    <div class="karta">
+
+        <h2>%</h2>
+
+        <p>
+            Wartość procentowa zależna od elementu nadrzędnego.
+        </p>
+
+        <div class="kod">
+            width: 50%;
+        </div>
+
+    </div>
+
+    <div class="karta">
+
+        <h2>Kiedy używać jakich jednostek?</h2>
+
+        <ul class="lista">
+            <li>px – gdy potrzebny jest dokładny rozmiar.</li>
+            <li>rem – do rozmiarów tekstu.</li>
+            <li>em – do elementów zależnych od tekstu.</li>
+            <li>% – do szerokości i wysokości względem rodzica.</li>
+            <li>vw i vh – do elementów zależnych od rozmiaru ekranu.</li>
+        </ul>
+
+    </div>
+
+</div>
+
+<div class="stopka">
+    Strona wykonana przez Miłosza Jackowicza-Szulca
+</div>
+
+</body>
+</html>

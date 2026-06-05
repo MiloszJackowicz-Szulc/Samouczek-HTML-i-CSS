@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Obrazy w HTML</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+header{
+    background:linear-gradient(to right,#0f3460,#533483);
+}
+
+.karta{
+    background-color:#1f4068;
+}
+
+.karta h2{
+    color:#4cc9f0;
+}
+
+.widok{
+    margin-top:10px;
+    padding:8px;
+    background:rgba(0,0,0,0.2);
+    border-left:3px solid #4cc9f0;
+    font-style:italic;
+}
+
+.przyklad-img{
+    max-width:300px;
+    border:2px solid #4cc9f0;
+    border-radius:10px;
+}
+
+@media (max-width:768px){
+
+    .przyklad-img{
+        max-width:100%;
+    }
+
+    .widok{
+        font-size:14px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <h1>Umieszczanie zdjęć w HTML</h1>
+</header>
+
+<div class="menu">
+    <a href="html.html">HTML</a>
+    <a href="css.html">CSS</a>
+</div>
+
+<div class="glowny">
+
+    <div class="karta">
+
+        <h2>Jak umieszczać zdjęcia na stronie?</h2>
+
+        <p>
+            Do umieszczania obrazów na stronie służy znacznik
+            &lt;img&gt;.
+            Najważniejszymi atrybutami są
+            <b>src</b>, który określa lokalizację pliku,
+            oraz <b>alt</b>, który zawiera opis alternatywny obrazka.
+        </p>
+
+        <p>
+            Można również użyć atrybutów
+            <b>width</b> oraz <b>height</b>,
+            które określają szerokość i wysokość obrazu.
+            Nie są one obowiązkowe, ale pomagają przeglądarce
+            odpowiednio przygotować układ strony.
+        </p>
+
+    </div>
+
+    <div class="karta">
+
+        <h2>Podstawowy przykład</h2>
+
+        <div class="kod">
+            &lt;img src="zdjecie.jpg" alt="Opis zdjęcia"&gt;
+        </div>
+
+        <div class="widok">
+            Widok strony:
+        </div>
+
+        <img
+        class="przyklad-img"
+        src="https://www.w3schools.com/html/pic_trulli.jpg"
+        alt="Przykładowe zdjęcie">
+
+    </div>
+
+    <div class="karta">
+
+        <h2>Określanie rozmiaru zdjęcia</h2>
+
+        <div class="kod">
+            &lt;img src="zdjecie.jpg"<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;alt="Opis zdjęcia"<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;width="300"<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;height="200"&gt;
+        </div>
+
+        <p>
+            Atrybuty width i height pozwalają ustawić
+            rozmiar obrazu w pikselach.
+        </p>
+
+    </div>
+
+    <div class="karta">
+
+        <h2>Cały kod strony</h2>
+
+        <div class="kod">
+            &lt;!DOCTYPE html&gt;<br>
+            &lt;html&gt;<br>
+            &lt;body&gt;<br><br>
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="zdjecie.jpg"<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;alt="Opis zdjęcia"&gt;<br><br>
+
+            &lt;/body&gt;<br>
+            &lt;/html&gt;
+        </div>
+
+    </div>
+
+    <div class="karta">
+
+        <h2>Dodatkowe informacje</h2>
+
+        <p>
+            Aby zdjęcie zostało poprawnie wyświetlone,
+            powinno znajdować się w tym samym folderze
+            co plik HTML.
+        </p>
+
+        <p>
+            Jeżeli obraz znajduje się w innym folderze
+            lub podfolderze, należy podać odpowiednią
+            ścieżkę dostępu do pliku.
+        </p>
+
+        <p>
+            Więcej informacji o ścieżkach znajdziesz
+            w rozdziale dotyczącym adresowania.
+        </p>
+
+    </div>
+
+</div>
+
+<div class="stopka">
+    Strona wykonana przez Miłosza Jackowicza-Szulca
+</div>
+
+</body>
+</html>

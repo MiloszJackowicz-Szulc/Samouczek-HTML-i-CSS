@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Model pudełkowy CSS</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+header{
+    background:linear-gradient(to right,#ff512f,#dd2476);
+}
+
+.karta{
+    background-color:#202b38;
+}
+
+.karta h2{
+    color:#ff512f;
+}
+
+@media (max-width:768px){
+
+    .kod{
+        font-size:14px;
+        overflow-x:auto;
+    }
+
+    img{
+        max-width:100%;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <h1>Model pudełkowy CSS</h1>
+</header>
+
+<div class="menu">
+    <a href="html.html">HTML</a>
+    <a href="css.html">CSS</a>
+</div>
+
+<div class="glowny">
+
+    <div class="karta">
+
+        <h2>Co to jest model pudełkowy?</h2>
+
+        <p>
+            Model pudełkowy (Box Model) to sposób, w jaki przeglądarka traktuje każdy element HTML jako prostokątne pudełko.
+        </p>
+
+        <img src="https://progra101.wordpress.com/wp-content/uploads/2026/03/gemini_generated_image_rjlpjrrjlpjrrjlp.png?w=768&allow_lossy=1" alt="zdjecie">
+
+    </div>
+
+    <div class="karta">
+
+        <h2>Margin</h2>
+
+        <p>
+            Margin to zewnętrzny odstęp elementu od innych elementów.
+            Jest przezroczysty i nie ma koloru tła.
+        </p>
+
+        <div class="kod">
+            &lt;style&gt;<br>
+            &nbsp;&nbsp;p{<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;background-color: pink;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;margin: 40px;<br>
+            &nbsp;&nbsp;}<br>
+            &lt;/style&gt;
+        </div>
+
+        <div class="widok">Widok:</div>
+
+        <p style="background:pink; margin:40px;">
+            Przykładowy tekst z margin
+        </p>
+
+    </div>
+
+    <div class="karta">
+
+        <h2>Border</h2>
+
+        <p>
+            Border to obramowanie elementu, które znajduje się między paddingiem a marginem.
+        </p>
+
+        <div class="kod">
+            &lt;style&gt;<br>
+            &nbsp;&nbsp;p{<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;border: 3px solid black;<br>
+            &nbsp;&nbsp;}<br>
+            &lt;/style&gt;
+        </div>
+
+        <div class="widok">Widok:</div>
+
+        <p style="border:3px solid black; padding:10px;">
+            Tekst z borderem
+        </p>
+
+    </div>
+
+    <div class="karta">
+
+        <h2>Padding</h2>
+
+        <p>
+            Padding to odstęp wewnętrzny między treścią a obramowaniem.
+            Powiększa “wnętrze” elementu.
+        </p>
+
+        <div class="kod">
+            &lt;style&gt;<br>
+            &nbsp;&nbsp;p{<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;padding: 40px;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;background-color: pink;<br>
+            &nbsp;&nbsp;}<br>
+            &lt;/style&gt;
+        </div>
+
+        <div class="widok">Widok:</div>
+
+        <p style="background:pink; padding:40px;">
+            Tekst z paddingiem
+        </p>
+
+    </div>
+
+    <div class="karta">
+
+        <h2>Skrócone zapisy</h2>
+
+        <p>
+            CSS pozwala skracać zapis margin i padding.
+        </p>
+
+        <div class="kod">
+            margin: 10px; → wszystkie strony<br><br>
+
+            margin: 20px 40px; → góra/dół | lewo/prawo<br><br>
+
+            margin: 10px 20px 40px; → góra | lewo/prawo | dół<br><br>
+
+            margin: 10px 20px 30px 40px; → góra | prawo | dół | lewo
+        </div>
+
+    </div>
+
+    <div class="karta">
+
+        <h2>Ustawienia stron</h2>
+
+        <p>
+            Możemy ustawiać wartości dla konkretnej strony elementu.
+        </p>
+
+        <div class="kod">
+            margin-top<br>
+            margin-bottom<br>
+            margin-left<br>
+            margin-right<br><br>
+
+            border-bottom: 2px solid black;
+        </div>
+
+    </div>
+
+</div>
+
+<div class="stopka">
+    Strona wykonana przez Miłosza Jackowicza-Szulca
+</div>
+
+</body>
+</html>

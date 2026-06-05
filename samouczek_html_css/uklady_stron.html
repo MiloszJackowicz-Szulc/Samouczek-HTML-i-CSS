@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Układy stron w CSS</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+header{
+    background:linear-gradient(to right,#ff512f,#dd2476);
+}
+
+.karta{
+    background-color:#202b38;
+}
+
+.karta h2{
+    color:#ff512f;
+}
+
+pre{
+    margin:0;
+    margin-left:-85px;
+    padding:0;
+}
+
+@media (max-width:768px){
+
+    .kod{
+        font-size:14px;
+        overflow-x:auto;
+    }
+    
+    img{
+        max-width:100%;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <h1>Układy stron w CSS</h1>
+</header>
+
+<div class="menu">
+    <a href="html.html">HTML</a>
+    <a href="css.html">CSS</a>
+</div>
+
+<div class="glowny">
+
+    <div class="karta">
+
+        <h2>Czym są układy stron?</h2>
+
+        <p>
+            Układ strony (layout) określa sposób rozmieszczenia elementów na stronie internetowej.
+            Dzięki niemu możemy ustawić nagłówek, menu, treść oraz stopkę w odpowiednich miejscach.
+        </p>
+
+        <p>
+            CSS pozwala kontrolować pozycję i rozmiar elementów, dzięki czemu strona jest czytelna i estetyczna.
+        </p>
+
+    </div>
+
+    <div class="karta">
+
+        <h2>Układ z nagłówkiem, menu i treścią</h2>
+
+        <p>
+            Najprostszy układ strony składa się z kilku podstawowych sekcji.
+        </p>
+
+        <div class="kod">
+            <pre>
+            <&lt;>!DOCTYPE html&gt;
+            &lt;html lang="pl"&gt;
+            &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;title&gt;Page Title&lt;/title&gt;
+
+            &lt;style&gt;
+            .header {
+                background-color: lightblue;
+                padding: 20px;
+                text-align: center;
+            }
+            .menu {
+                background-color: lightgray;
+                padding: 10px;
+            }
+            .content {
+                background-color: lightyellow;
+                padding: 10px;
+            }
+            .footer {
+                background-color: lightgray;
+                padding: 10px;
+                text-align: center;
+            }
+            &lt;/style&gt;
+
+            &lt;/head&gt;
+
+            &lt;body&gt;
+
+            &lt;div class="header"&gt;Nagłówek&lt;/div&gt;
+            &lt;div class="menu"&gt;Menu&lt;/div&gt;
+            &lt;div class="content"&gt;Treść strony&lt;/div&gt;
+            &lt;div class="footer"&gt;Stopka&lt;/div&gt;
+
+            &lt;/body&gt;
+            &lt;/html&gt;
+            </pre>
+        </div>
+
+        <div class="widok">Widok strony:</div>
+
+        <img src="https://progra101.wordpress.com/wp-content/uploads/2026/03/obraz-1.png?w=768&allow_lossy=1" alt="przyklad">
+
+    </div>
+
+    <div class="karta">
+
+        <h2>Układ z Flexbox</h2>
+
+        <p>
+            Flexbox pozwala łatwo ustawiać elementy w rzędzie lub kolumnie.
+        </p>
+
+        <div class="kod">
+            <pre>
+            &lt;div class="container"&gt;
+                &lt;div class="menu"&gt;Menu&lt;/div&gt;
+                &lt;div class="content"&gt;Treść&lt;/div&gt;
+            &lt;/div&gt;
+            </pre>
+        </div>
+
+        <div class="kod">
+            <pre>
+            .container {
+                display: flex;
+            }
+
+            .menu {
+                width: 25%;
+                background-color: lightgray;
+                padding: 10px;
+            }
+
+            .content {
+                width: 75%;
+                background-color: lightyellow;
+                padding: 10px;
+            }
+            </pre>
+        </div>
+
+        <div class="widok">Widok strony:</div>
+
+        <img src="https://progra101.wordpress.com/wp-content/uploads/2026/03/obraz.png?w=768&allow_lossy=1" alt="przyklad">
+
+    </div>
+
+    <div class="karta">
+
+        <h2>Układ Grid</h2>
+
+        <p>
+            CSS Grid pozwala tworzyć układy wierszy i kolumn.
+        </p>
+
+        <div class="kod">
+            <pre>
+            &lt;div class="grid-container"&gt;
+                &lt;div class="grid-item"&gt;Menu&lt;/div&gt;
+                &lt;div class="grid-item"&gt;Treść&lt;/div&gt;
+            &lt;/div&gt;
+            </pre>
+        </div>
+
+        <div class="kod">
+            <pre>
+            .grid-container {
+                display: grid;
+                grid-template-columns: 1fr 3fr;
+                gap: 10px;
+            }
+
+            .grid-item {
+                padding: 10px;
+                background-color: lightblue;
+            }
+            </pre>
+        </div>
+
+        <div class="widok">Widok strony:</div>
+
+        <img src="https://progra101.wordpress.com/wp-content/uploads/2026/03/obraz.png?w=768&allow_lossy=1" alt="przyklad">
+
+    </div>
+
+    <div class="karta">
+
+        <h2>Ważne właściwości układów</h2>
+
+        <ul>
+            <li><b>display</b> – grid / flex</li>
+            <li><b>width / height</b> – rozmiary</li>
+            <li><b>padding / margin</b> – odstępy</li>
+            <li><b>position</b> – pozycjonowanie elementów</li>
+        </ul>
+
+    </div>
+
+</div>
+
+</body>
+</html>
