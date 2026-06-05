@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Listy w HTML</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+header{
+    background:linear-gradient(to right,#0f3460,#533483);
+}
+
+.karta{
+    background-color:#1f4068;
+}
+
+.karta h2{
+    color:#4cc9f0;
+}
+
+.karta ul, .karta ol {
+    margin-top: 10px;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <h1>Listy w HTML</h1>
+</header>
+
+<div class="menu">
+    <a href="html.html">HTML</a>
+    <a href="css.html">CSS</a>
+</div>
+
+<div class="glowny">
+
+    <div class="karta">
+        <h2>Jak robić listy w HTML?</h2>
+
+        <p>
+            Listy w HTML służą do porządkowania treści w sposób czytelny dla użytkownika i wyszukiwarek.
+            Każdy element listy musi znajdować się wewnątrz znacznika <code>&lt;li&gt;</code>.
+        </p>
+
+        <p>Lista pomaga uporządkować informacje.</p>
+    </div>
+
+    <div class="karta">
+        <h2>Lista uporządkowana (&lt;ol&gt;)</h2>
+
+        <p>
+            Lista uporządkowana automatycznie numeruje elementy.
+            Najczęściej używana jest w instrukcjach krok po kroku.
+        </p>
+
+        <div class="kod">
+            &lt;ol&gt;<br>
+            &nbsp;&nbsp;&lt;li&gt;Krok pierwszy&lt;/li&gt;<br>
+            &nbsp;&nbsp;&lt;li&gt;Krok drugi&lt;/li&gt;<br>
+            &nbsp;&nbsp;&lt;li&gt;Krok trzeci&lt;/li&gt;<br>
+            &lt;/ol&gt;
+        </div>
+
+        <div class="widok">Widok strony:</div>
+
+        <ol>
+            <li>Krok pierwszy</li>
+            <li>Krok drugi</li>
+            <li>Krok trzeci</li>
+        </ol>
+    </div>
+
+    <div class="karta">
+        <h2>Atrybut type w &lt;ol&gt;</h2>
+
+        <p>Możemy zmieniać sposób numerowania listy:</p>
+
+        <ul>
+            <li><b>1</b> – cyfry arabskie (domyślne)</li>
+            <li><b>A</b> – wielkie litery</li>
+            <li><b>a</b> – małe litery</li>
+            <li><b>I</b> – liczby rzymskie</li>
+            <li><b>i</b> – małe liczby rzymskie</li>
+        </ul>
+
+        <div class="kod">
+            &lt;ol type="I"&gt;<br>
+            &nbsp;&nbsp;&lt;li&gt;Krok pierwszy&lt;/li&gt;<br>
+            &nbsp;&nbsp;&lt;li&gt;Krok drugi&lt;/li&gt;<br>
+            &nbsp;&nbsp;&lt;li&gt;Krok trzeci&lt;/li&gt;<br>
+            &lt;/ol&gt;
+        </div>
+
+        <div class="widok">Widok strony:</div>
+
+        <ol type="I">
+            <li>Krok pierwszy</li>
+            <li>Krok drugi</li>
+            <li>Krok trzeci</li>
+        </ol>
+    </div>
+
+    <div class="karta">
+        <h2>Lista nieuporządkowana (&lt;ul&gt;)</h2>
+
+        <p>
+            Lista nieuporządkowana służy do wypunktowań, gdzie kolejność nie ma znaczenia.
+        </p>
+
+        <div class="kod">
+            &lt;ul&gt;<br>
+            &nbsp;&nbsp;&lt;li&gt;Chleb&lt;/li&gt;<br>
+            &nbsp;&nbsp;&lt;li&gt;Mleko&lt;/li&gt;<br>
+            &lt;/ul&gt;
+        </div>
+
+        <div class="widok">Widok strony:</div>
+
+        <ul>
+            <li>Chleb</li>
+            <li>Mleko</li>
+        </ul>
+    </div>
+
+    <div class="karta">
+        <h2>Listy zagnieżdżone</h2>
+
+        <p>
+            Listy można umieszczać jedna w drugiej, tworząc strukturę wielopoziomową.
+        </p>
+
+        <div class="kod">
+            &lt;ol&gt;<br>
+            &nbsp;&nbsp;&lt;li&gt;Owoce<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Jabłko&lt;/li&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Banan&lt;/li&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br>
+            &nbsp;&nbsp;&lt;/li&gt;<br>
+            &lt;/ol&gt;
+        </div>
+
+        <div class="widok">Widok strony:</div>
+
+        <ol>
+            <li>Owoce
+                <ul>
+                    <li>Jabłko</li>
+                    <li>Banan</li>
+                </ul>
+            </li>
+            <li>Warzywa
+                <ul>
+                    <li>Ogórek</li>
+                    <li>Pomidor</li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+
+<div class="stopka">
+    Strona wykonana przez Miłosza Jackowicza-Szulca
+</div>
+
+</body>
+</html>

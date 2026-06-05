@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Background w CSS</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+header{
+    background:linear-gradient(to right,#ff512f,#dd2476);
+}
+
+.karta{
+    background-color:#202b38;
+}
+
+.karta h2{
+    color:#ff512f;
+}
+
+.demo-box{
+    padding:30px;
+    text-align:center;
+    color:black;
+    font-weight:bold;
+}
+
+@media (max-width:768px){
+
+    .kod{
+        font-size:14px;
+        overflow-x:auto;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <h1>Background w CSS</h1>
+</header>
+
+<div class="menu">
+    <a href="html.html">HTML</a>
+    <a href="css.html">CSS</a>
+</div>
+
+<div class="glowny">
+
+    <div class="karta">
+
+        <h2>Czym jest background w CSS?</h2>
+
+        <p>
+            Właściwości background w CSS służą do ustawiania tła elementów.
+            Możemy zmieniać kolor, obraz oraz jego zachowanie.
+        </p>
+
+        <p>
+            Najczęściej używane właściwości:
+        </p>
+
+        <ul>
+            <li>background-color</li>
+            <li>background-image</li>
+            <li>background-repeat</li>
+            <li>background-position</li>
+            <li>background-attachment</li>
+            <li>background (skrót)</li>
+        </ul>
+
+    </div>
+
+    <div class="karta">
+
+        <h2>background-color</h2>
+
+        <p>
+            Ustawia kolor tła elementu.
+        </p>
+
+        <div class="kod">
+            body {<br>
+            &nbsp;&nbsp;background-color: lightblue;<br>
+            }<br><br>
+        </div>
+
+        <div class="widok">Widok:</div>
+
+        <div class="demo-box" style="background-color:lightblue;">
+            Tło kolorowe
+        </div>
+
+    </div>
+
+    <div class="karta">
+
+        <h2>background-image</h2>
+
+        <p>
+            Ustawia obraz jako tło elementu.
+        </p>
+
+        <div class="kod">
+            body {<br>
+            &nbsp;&nbsp;background-image: url("tlo.jpg");<br>
+            }
+        </div>
+
+        <p>
+            Domyślnie obraz powtarza się i wypełnia cały element.
+        </p>
+
+    </div>
+
+    <div class="karta">
+
+        <h2>background-repeat</h2>
+
+        <p>
+            Określa sposób powtarzania obrazu tła.
+        </p>
+
+        <ul>
+            <li>repeat</li>
+            <li>repeat-x</li>
+            <li>repeat-y</li>
+            <li>no-repeat</li>
+        </ul>
+
+        <div class="kod">
+            body {<br>
+            &nbsp;&nbsp;background-image: url("tlo.jpg");<br>
+            &nbsp;&nbsp;background-repeat: no-repeat;<br>
+            }
+        </div>
+
+    </div>
+
+    <div class="karta">
+
+        <h2>background-position</h2>
+
+        <p>
+            Ustawia pozycję obrazu tła.
+        </p>
+
+        <div class="kod">
+            body {<br>
+            &nbsp;&nbsp;background-image: url("tlo.jpg");<br>
+            &nbsp;&nbsp;background-position: center;<br>
+            }
+        </div>
+
+    </div>
+
+    <div class="karta">
+
+        <h2>background-attachment</h2>
+
+        <p>
+            Określa czy tło przewija się razem ze stroną.
+        </p>
+
+        <div class="kod">
+            body {<br>
+            &nbsp;&nbsp;background-image: url("tlo.jpg");<br>
+            &nbsp;&nbsp;background-attachment: fixed;<br>
+            }
+        </div>
+
+        <p>
+            fixed oznacza, że tło pozostaje w miejscu podczas scrollowania.
+        </p>
+
+    </div>
+
+    <div class="karta">
+
+        <h2>background (skrót)</h2>
+
+        <p>
+            Jedna właściwość może zastąpić kilka innych.
+        </p>
+
+        <div class="kod">
+            body {<br>
+            &nbsp;&nbsp;background: lightblue url("tlo.jpg") no-repeat center;<br>
+            }
+        </div>
+
+        <p>
+            W jednej linijce ustawiamy kolor, obraz, powtarzanie i pozycję.
+        </p>
+
+    </div>
+
+</div>
+
+<div class="stopka">
+    Strona wykonana przez Miłosza Jackowicza-Szulca
+</div>
+
+</body>
+</html>

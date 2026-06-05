@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wprowadzenie do CSS</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+header{
+    background:linear-gradient(to right,#ff512f,#dd2476);
+}
+
+.karta{
+    background-color:#202b38;
+}
+
+.karta h2{
+    color:#ff512f;
+}
+
+.hierarchia{
+    margin-top:10px;
+}
+
+.hierarchia li{
+    margin-bottom:10px;
+}
+
+@media (max-width:768px){
+
+    .hierarchia li{
+        margin-bottom:8px;
+    }
+
+    .kod{
+        font-size:14px;
+        overflow-x:auto;
+    }
+
+    img{
+        max-width:100%;
+    }
+    
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <h1>Wprowadzenie do CSS</h1>
+</header>
+
+<div class="menu">
+    <a href="html.html">HTML</a>
+    <a href="css.html">CSS</a>
+</div>
+
+<div class="glowny">
+
+    <div class="karta">
+
+        <h2>Co to jest CSS?</h2>
+
+        <p>
+            CSS (Kaskadowe Arkusze Stylów) jest językiem odpowiedzialnym
+            za wygląd strony internetowej.
+        </p>
+
+        <p>
+            Dzięki niemu można zmieniać kolory, czcionki,
+            rozmiary elementów oraz ich położenie na stronie.
+        </p>
+
+        <p>
+            CSS oddziela wygląd strony od jej struktury zapisanej
+            w HTML, dzięki czemu tworzenie i zarządzanie stronami
+            jest znacznie łatwiejsze.
+        </p>
+
+        <p>
+            To właśnie za pomocą CSS tworzy się również
+            responsywność stron internetowych.
+        </p>
+
+    </div>
+
+    <div class="karta">
+
+        <h2>Historia CSS</h2>
+
+        <p>
+            Twórcą CSS był Håkon Wium Lie, który zaproponował ten język
+            w 1994 roku.
+        </p>
+
+        <p>
+            Pierwsze standardy CSS1 i CSS2 pojawiły się pod koniec lat 90.
+        </p>
+
+        <p>
+            Później powstał CSS 2.1, który poprawił wiele błędów
+            wcześniejszych wersji.
+        </p>
+
+        <p>
+            Największą zmianę przyniósł CSS3. Zamiast jednej wielkiej wersji
+            wprowadzono niezależne moduły rozwijane osobno.
+        </p>
+
+        <p>
+            Dzięki temu pojawiły się nowoczesne rozwiązania takie jak:
+            Flexbox, Grid, animacje i zaawansowane efekty wizualne.
+        </p>
+
+    </div>
+
+    <div class="karta">
+
+        <h2>Jak piszemy kod w CSS?</h2>
+
+        <p>
+            Reguła CSS składa się z:
+        </p>
+
+        <ul class="lista">
+            <li>selektora,</li>
+            <li>cechy (właściwości),</li>
+            <li>wartości.</li>
+        </ul>
+
+        <img src="https://progra101.wordpress.com/wp-content/uploads/2026/03/gemini_generated_image_ruwi2hruwi2hruwi.png?w=768&allow_lossy=1" alt="obrazek">
+
+        <p>
+            Powyższa reguła ustawi niebieski kolor tekstu
+            i wyśrodkuje go na stronie.
+        </p>
+
+    </div>
+
+    <div class="karta">
+
+        <h2>Co to jest kaskadowość?</h2>
+
+        <p>
+            Kaskadowość określa, który styl zostanie zastosowany,
+            gdy jeden element posiada kilka różnych formatowań.
+        </p>
+
+        <p>
+            Im bliżej danego elementu znajduje się styl,
+            tym większy ma priorytet.
+        </p>
+
+        <h3>Hierarchia stylów:</h3>
+
+        <ol class="hierarchia">
+            <li>Styl lokalny</li>
+            <li>Rozciąganie stylu span</li>
+            <li>Wydzielone bloki div</li>
+            <li>Wewnętrzny arkusz stylów</li>
+            <li>Zewnętrzny arkusz stylów</li>
+            <li>Import arkusza stylów</li>
+            <li>Domyślne ustawienia przeglądarki</li>
+        </ol>
+
+        <p>
+            1 oznacza najwyższy priorytet,
+            natomiast 7 najniższy.
+        </p>
+
+    </div>
+
+    <div class="karta">
+
+        <h2>W czym piszemy CSS?</h2>
+
+        <p>
+            CSS zapisujemy w plikach posiadających rozszerzenie
+            .css.
+        </p>
+
+        <p>
+            Najczęściej wykorzystuje się do tego
+            Visual Studio Code lub Notepad++.
+        </p>
+
+        <p>
+            Zaleca się unikanie polskich znaków
+            w nazwach plików CSS.
+        </p>
+
+        <div class="kod">
+style.css
+        </div>
+
+    </div>
+
+    <div class="karta">
+
+        <h2>Jak podpiąć zewnętrzny arkusz CSS?</h2>
+
+        <p>
+            Aby połączyć dokument HTML z plikiem CSS,
+            należy użyć znacznika link w sekcji head.
+        </p>
+
+        <div class="kod">
+            &lt;link rel="stylesheet" href="style.css"&gt;
+        </div>
+
+        <p>
+            Dzięki temu jeden arkusz stylów może obsługiwać
+            wiele podstron jednocześnie.
+        </p>
+
+    </div>
+
+    <div class="karta">
+
+        <h2>Przykład działania CSS</h2>
+
+        <h3>HTML:</h3>
+
+        <div class="kod">
+            &lt;h1&gt;Nauka CSS-a&lt;/h1&gt;<br><br>
+
+            &lt;p style="color:purple;"&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;Przykładowy tekst.<br>
+            &lt;/p&gt;
+        </div>
+
+        <h3>CSS:</h3>
+
+        <div class="kod">
+            body{<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;background-color:#BBBBBB;<br>
+            }<br><br>
+
+            h1{<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;text-align:right;<br>
+            }<br><br>
+
+            p{<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;color:red;<br>
+            }
+        </div>
+
+        <p>
+            Tekst w znaczniku p będzie fioletowy,
+            ponieważ styl lokalny ma wyższy priorytet
+            niż reguła z pliku CSS.
+        </p>
+
+    </div>
+
+</div>
+
+<div class="stopka">
+    Strona wykonana przez Miłosza Jackowicza-Szulca
+</div>
+
+</body>
+</html>

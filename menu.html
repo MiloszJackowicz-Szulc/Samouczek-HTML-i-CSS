@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu w HTML</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+header{
+    background:linear-gradient(to right,#0f3460,#533483);
+}
+
+.karta{
+    background-color:#1f4068;
+}
+
+.karta h2{
+    color:#4cc9f0;
+}
+
+.lista{
+    margin-left:20px;
+    color:white;
+}
+
+p{
+    color:white;
+}
+
+.menu-demo{
+    background:#533483;
+    padding:10px;
+    border-radius:8px;
+    margin-top:10px;
+}
+
+.menu-demo a{
+    color:white;
+    text-decoration:none;
+    margin-right:15px;
+    font-weight:bold;
+}
+
+.menu-demo a:hover{
+    text-decoration:underline;
+}
+
+.menu-vertical{
+    list-style-type:none;
+    padding:0;
+    margin-top:10px;
+}
+
+.menu-vertical li{
+    margin:5px 0;
+}
+
+.menu-vertical a{
+    display:block;
+    padding:8px;
+    background:#533483;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+}
+
+.menu-vertical a:hover{
+    background:#4cc9f0;
+    color:#0f3460;
+}
+
+.menu-demo{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <h1>Menu w HTML</h1>
+</header>
+
+<div class="menu">
+    <a href="html.html">HTML</a>
+    <a href="css.html">CSS</a>
+</div>
+
+<div class="glowny">
+
+    <div class="karta">
+
+        <h2>Co to jest menu w HTML?</h2>
+
+        <p>
+            Menu w HTML to zestaw linków, które pozwalają użytkownikowi
+            poruszać się po stronie internetowej.
+        </p>
+
+        <p>
+            Najczęściej buduje się je za pomocą znaczników:
+            <b>&lt;nav&gt;</b>, <b>&lt;ul&gt;</b>, <b>&lt;li&gt;</b> oraz <b>&lt;a&gt;</b>.
+        </p>
+
+    </div>
+
+    <div class="karta">
+
+        <h2>Podstawowa struktura menu</h2>
+
+        <p>Według W3Schools najprostsze menu wygląda tak:</p>
+
+        <div class="kod">
+            &lt;nav&gt;<br>
+            &nbsp;&nbsp;&lt;ul&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Strona główna&lt;/a&gt;&lt;/li&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;O nas&lt;/a&gt;&lt;/li&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Kontakt&lt;/a&gt;&lt;/li&gt;<br>
+            &nbsp;&nbsp;&lt;/ul&gt;<br>
+            &lt;/nav&gt;
+        </div>
+
+    </div>
+
+    <div class="karta">
+
+        <h2>Menu poziome (horizontal menu)</h2>
+
+        <p>
+            Menu poziome to najczęściej używany typ menu na stronach internetowych.
+        </p>
+
+        <div class="kod">
+            nav ul li {<br>
+            &nbsp;&nbsp;display: inline;<br>
+            }
+        </div>
+
+        <div class="widok">
+            Linki ustawione obok siebie tworzą pasek nawigacyjny.
+        </div>
+
+    </div>
+
+    <div class="karta">
+
+        <h2>Przykład menu poziomego</h2>
+
+        <div class="menu-demo">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </div>
+
+        <div class="kod">
+            .menu a {<br>
+            &nbsp;&nbsp;color: white;<br>
+            &nbsp;&nbsp;text-decoration: none;<br>
+            &nbsp;&nbsp;margin-right: 15px;<br>
+            }
+        </div>
+
+    </div>
+
+    <div class="karta">
+
+        <h2>Menu pionowe (vertical menu)</h2>
+
+        <p>
+            Menu pionowe często stosuje się w panelach bocznych strony.
+        </p>
+
+        <div class="kod">
+            ul {<br>
+            &nbsp;&nbsp;list-style-type: none;<br>
+            &nbsp;&nbsp;padding: 0;<br>
+            }<br><br>
+
+            li a {<br>
+            &nbsp;&nbsp;display: block;<br>
+            }
+        </div>
+
+    </div>
+
+    <div class="karta">
+
+        <h2>Przykład menu pionowego</h2>
+
+        <ul class="menu-vertical">
+            <li><a href="#">Strona główna</a></li>
+            <li><a href="#">O nas</a></li>
+            <li><a href="#">Oferta</a></li>
+            <li><a href="#">Kontakt</a></li>
+        </ul>
+
+    </div>
+
+    <div class="karta">
+
+        <h2>Najważniejsze właściwości menu</h2>
+
+        <ul class="lista">
+            <li><b>list-style-type</b> – usuwa kropki listy</li>
+            <li><b>display: inline</b> – ustawia elementy obok siebie</li>
+            <li><b>display: block</b> – robi pełne klikalne pola</li>
+            <li><b>text-decoration</b> – usuwa podkreślenie linków</li>
+            <li><b>:hover</b> – efekt po najechaniu</li>
+        </ul>
+
+    </div>
+
+</div>
+
+<div class="stopka">
+    Strona wykonana przez Miłosza Jackowicza-Szulca
+</div>
+
+</body>
+</html>

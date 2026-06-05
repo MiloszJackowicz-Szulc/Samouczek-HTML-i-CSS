@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Podstawowe właściwości CSS</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+header{
+    background:linear-gradient(to right,#ff512f,#dd2476);
+}
+
+.karta{
+    background-color:#202b38;
+}
+
+.karta h2{
+    color:#ff512f;
+}
+
+@media (max-width:768px){
+
+    .kod{
+        font-size:14px;
+        overflow-x:auto;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <h1>Podstawowe właściwości CSS</h1>
+</header>
+
+<div class="menu">
+    <a href="html.html">HTML</a>
+    <a href="css.html">CSS</a>
+</div>
+
+<div class="glowny">
+
+<div class="karta">
+<h2>Color</h2>
+
+<p>
+Właściwość color służy do ustawiania koloru tekstu.
+Kolor można zapisać nazwą, kodem HEX lub RGB.
+</p>
+
+<div class="kod">
+color: rgb(51, 51, 51);
+</div>
+
+</div>
+
+<div class="karta">
+<h2>Background-color</h2>
+
+<p>
+Właściwość background-color ustawia kolor tła elementu.
+Pozwala wyróżniać sekcje, przyciski oraz nagłówki.
+</p>
+
+<div class="kod">
+background-color: lightblue;
+</div>
+
+</div>
+
+<div class="karta">
+<h2>Font-size</h2>
+
+<p>
+Font-size odpowiada za wielkość czcionki.
+Najczęściej używa się jednostki px.
+</p>
+
+<div class="kod">
+font-size: 18px;
+</div>
+
+</div>
+
+<div class="karta">
+<h2>Font-family</h2>
+
+<p>
+Font-family określa krój pisma używany na stronie.
+Można podać kilka czcionek jako zapasowe.
+</p>
+
+<div class="kod">
+font-family: Arial, sans-serif;
+</div>
+
+</div>
+
+<div class="karta">
+<h2>Font-weight</h2>
+
+<p>
+Font-weight ustawia grubość tekstu.
+Najczęściej używa się wartości bold lub normal.
+</p>
+
+<div class="kod">
+font-weight: bold;
+</div>
+
+</div>
+
+<div class="karta">
+<h2>Font-style</h2>
+
+<p>
+Font-style służy do pochylania tekstu.
+Najczęściej stosowana wartość to italic.
+</p>
+
+<div class="kod">
+font-style: italic;
+</div>
+
+</div>
+
+<div class="karta">
+<h2>Text-align</h2>
+
+<p>
+Text-align ustawia wyrównanie tekstu.
+Można wyrównywać do lewej, prawej, środka lub obu krawędzi.
+</p>
+
+<div class="kod">
+text-align: justify;
+</div>
+
+</div>
+
+<div class="karta">
+<h2>Text-decoration</h2>
+
+<p>
+Text-decoration odpowiada za dekorację tekstu.
+Pozwala dodawać lub usuwać podkreślenia.
+</p>
+
+<div class="kod">
+text-decoration: underline;
+</div>
+
+</div>
+
+<div class="karta">
+<h2>Text-transform</h2>
+
+<p>
+Text-transform zmienia wielkość liter bez edytowania HTML.
+</p>
+
+<div class="kod">
+text-transform: uppercase;
+</div>
+
+</div>
+
+<div class="karta">
+<h2>Letter-spacing</h2>
+
+<p>
+Letter-spacing kontroluje odstępy pomiędzy literami.
+</p>
+
+<div class="kod">
+letter-spacing: 2px;
+</div>
+
+</div>
+
+<div class="karta">
+<h2>Border-radius</h2>
+
+<p>
+Border-radius zaokrągla rogi elementów.
+Jest często używany przy przyciskach i kartach.
+</p>
+
+<div class="kod">
+border-radius: 8px;
+</div>
+
+</div>
+
+<div class="karta">
+<h2>List-style-type</h2>
+
+<p>
+List-style-type zmienia wygląd punktów listy
+lub całkowicie je ukrywa.
+</p>
+
+<div class="kod">
+list-style-type: none;
+</div>
+
+</div>
+
+<div class="karta">
+<h2>Text-shadow</h2>
+
+<p>
+Text-shadow dodaje cień do tekstu.
+Może poprawić czytelność napisów.
+</p>
+
+<div class="kod">
+text-shadow: 2px 2px 4px black;
+</div>
+
+</div>
+
+<div class="karta">
+<h2>Box-shadow</h2>
+
+<p>
+Box-shadow dodaje cień do całego elementu.
+Pozwala uzyskać efekt głębi.
+</p>
+
+<div class="kod">
+box-shadow: 0 4px 8px grey;
+</div>
+
+</div>
+
+<div class="karta">
+<h2>:hover</h2>
+
+<p>
+Pseudoklasa :hover działa po najechaniu kursorem
+na element.
+</p>
+
+<div class="kod">
+p:hover {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;background-color: darkblue;<br>
+}
+</div>
+
+</div>
+
+<div class="karta">
+<h2>:active</h2>
+
+<p>
+Pseudoklasa :active działa podczas kliknięcia elementu.
+</p>
+
+<div class="kod">
+a:active {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;color:red;<br>
+}
+</div>
+
+</div>
+
+<div class="karta">
+<h2>:visited</h2>
+
+<p>
+Pseudoklasa :visited stylizuje odwiedzone linki.
+</p>
+
+<div class="kod">
+a:visited {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;color:purple;<br>
+}
+</div>
+
+</div>
+
+<div class="karta">
+<h2>:link</h2>
+
+<p>
+Pseudoklasa :link dotyczy linków,
+które nie zostały jeszcze odwiedzone.
+</p>
+
+<div class="kod">
+a:link {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;color:#00FF00;<br>
+}
+</div>
+
+</div>
+
+<div class="karta">
+
+<p>
+Poza wymienionymi tu wartościami istnieje też wiele innych. W ramach zobaczenia innych zachęcam odwiedzenie strony: <a href="https://www.w3schools.com/cssref/index.php">W3Schools</a>
+</p>
+
+</div>
+
+</div>
+
+<div class="stopka">
+    Strona wykonana przez Miłosza Jackowicza-Szulca
+</div>
+
+</body>
+</html>
